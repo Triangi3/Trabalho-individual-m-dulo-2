@@ -6,31 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name ="color-scheme" content="dark">
     <title>Do Módulo 2 :)</title>
-
+ 
 </head>
 <body>
+
     <center><h1>Bem vindo(a)!</h1></center>
 
-        
-   
-    <center>
-        <div>
+    
+       <center> 
         <label for="Selecionar-código">Selecione um método de criptografia:</label>
 
         <select name="código" id="Selecionar-código">
-            <option value="Selecione">Selecione</option>
-            <option value="Cifra">Cifra de César</option>
-            <option value="Base64">Base64</option>
-        </div>
-         </center>
-  
+            <option id="selecione" value="Selecione">Selecione</option>
+            <option id="cifra"  value="Cifra">Cifra de César</option>
+            <option id="base64" value="Base64">Base64</option>
+        </select></center>
+         
+        <center><main>
+            
+            <form id="cifrador" autocomplete="off">
+             </form>
 
-    <center>
-        
-    <div style="margin-bottom: 20px; flex-direction: column";>
+            <div id="resultado"></div>
 
+            <div class="rango">
+                <input id="rango" type="range" value="10" min="1" max="20" oninput="this.nextElementSibling.value = this.value">
+                <output>10</output>
+            </div>
 
+        </main></center>
 
+    <center><textarea name="texto" id="texto cols="50" rows="10"></textarea></center>
+
+    <center> <div style="margin-bottom: 20px; flex-direction: column";>
 
         <div>
             <input type="radio" id="Normal" name="drone" value="Normal"
@@ -40,21 +48,16 @@
 
         <div>
             <input type="radio" id="encode" name="drone" value="Codificar"
-                   checked>
+                   >
             <label for="codificar">Codificar</label>
           </div>
       
           <div>
-            <input type="radio" id="decode" name="drone" value="Descodificar">
-            <label for="decodificar">Descodificar</label>
-           </div></center>
-        
-       
-
-    </div>
-
-    <center><textarea name="" id="" cols="30" rows="10"></textarea></center>
-
-    <script src="trabalhomódulo2.js"></script>
+            <input type="radio" id="decode" name="drone" value="Descodificar"
+                   >
+            <label for="descodificar">Descodificar</label>
+           </div>
+        </div> </center>
+    <script src="cifradecesar.js"></script>
 </body>
 </html>
